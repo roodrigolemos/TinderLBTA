@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B726B4F724DAFDDF00BEDEF3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B726B4F624DAFDDF00BEDEF3 /* CardView.swift */; };
 		B7F656F724D9AA8F00694B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656F624D9AA8F00694B5F /* AppDelegate.swift */; };
 		B7F656F924D9AA8F00694B5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656F824D9AA8F00694B5F /* SceneDelegate.swift */; };
 		B7F656FB24D9AA8F00694B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656FA24D9AA8F00694B5F /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B726B4F624DAFDDF00BEDEF3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B7F656F324D9AA8F00694B5F /* TinderLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F656F624D9AA8F00694B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F656F824D9AA8F00694B5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				B7F6570E24D9BC5800694B5F /* HomeBottomControlsStackView.swift */,
 				B7F6571024D9BF7200694B5F /* TopNavigationStackView.swift */,
+				B726B4F624DAFDDF00BEDEF3 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B726B4F724DAFDDF00BEDEF3 /* CardView.swift in Sources */,
 				B7F656FB24D9AA8F00694B5F /* ViewController.swift in Sources */,
 				B7F656F724D9AA8F00694B5F /* AppDelegate.swift in Sources */,
 				B7F6570F24D9BC5800694B5F /* HomeBottomControlsStackView.swift in Sources */,
