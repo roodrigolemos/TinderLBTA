@@ -10,6 +10,7 @@
 		B726B4F724DAFDDF00BEDEF3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B726B4F624DAFDDF00BEDEF3 /* CardView.swift */; };
 		B73E07C524DC506800692543 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E07C424DC506800692543 /* User.swift */; };
 		B73E07C824DC6EA000692543 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E07C724DC6EA000692543 /* CardViewModel.swift */; };
+		B79B1BDF24DDAE4E00E1BEEE /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B1BDE24DDAE4E00E1BEEE /* Advertiser.swift */; };
 		B7F656F724D9AA8F00694B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656F624D9AA8F00694B5F /* AppDelegate.swift */; };
 		B7F656F924D9AA8F00694B5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656F824D9AA8F00694B5F /* SceneDelegate.swift */; };
 		B7F656FB24D9AA8F00694B5F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656FA24D9AA8F00694B5F /* HomeController.swift */; };
@@ -25,6 +26,7 @@
 		B726B4F624DAFDDF00BEDEF3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B73E07C424DC506800692543 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B73E07C724DC6EA000692543 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		B79B1BDE24DDAE4E00E1BEEE /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		B7F656F324D9AA8F00694B5F /* TinderLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F656F624D9AA8F00694B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F656F824D9AA8F00694B5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				B73E07C424DC506800692543 /* User.swift */,
+				B79B1BDE24DDAE4E00E1BEEE /* Advertiser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79B1BDF24DDAE4E00E1BEEE /* Advertiser.swift in Sources */,
 				B726B4F724DAFDDF00BEDEF3 /* CardView.swift in Sources */,
 				B7F656FB24D9AA8F00694B5F /* HomeController.swift in Sources */,
 				B7F656F724D9AA8F00694B5F /* AppDelegate.swift in Sources */,
