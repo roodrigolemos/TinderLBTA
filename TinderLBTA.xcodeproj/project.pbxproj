@@ -10,6 +10,7 @@
 		B726B4F724DAFDDF00BEDEF3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B726B4F624DAFDDF00BEDEF3 /* CardView.swift */; };
 		B73E07C524DC506800692543 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E07C424DC506800692543 /* User.swift */; };
 		B73E07C824DC6EA000692543 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E07C724DC6EA000692543 /* CardViewModel.swift */; };
+		B746F09A24EAB0FA000F3F97 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746F09924EAB0FA000F3F97 /* RegistrationViewModel.swift */; };
 		B794338B24E1B92300112617 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794338A24E1B92300112617 /* RegistrationController.swift */; };
 		B794338D24E1B96700112617 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794338C24E1B96700112617 /* CustomTextField.swift */; };
 		B79B1BDF24DDAE4E00E1BEEE /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B1BDE24DDAE4E00E1BEEE /* Advertiser.swift */; };
@@ -28,6 +29,7 @@
 		B726B4F624DAFDDF00BEDEF3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B73E07C424DC506800692543 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B73E07C724DC6EA000692543 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		B746F09924EAB0FA000F3F97 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		B794338A24E1B92300112617 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		B794338C24E1B96700112617 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B79B1BDE24DDAE4E00E1BEEE /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				B7F656FA24D9AA8F00694B5F /* HomeController.swift */,
 				B794338A24E1B92300112617 /* RegistrationController.swift */,
+				B746F09924EAB0FA000F3F97 /* RegistrationViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				B794338B24E1B92300112617 /* RegistrationController.swift in Sources */,
 				B7F6571124D9BF7200694B5F /* TopNavigationStackView.swift in Sources */,
 				B794338D24E1B96700112617 /* CustomTextField.swift in Sources */,
+				B746F09A24EAB0FA000F3F97 /* RegistrationViewModel.swift in Sources */,
 				B7F6570C24D9AB8E00694B5F /* Extensions+UIView.swift in Sources */,
 				B7F656F924D9AA8F00694B5F /* SceneDelegate.swift in Sources */,
 				B73E07C824DC6EA000692543 /* CardViewModel.swift in Sources */,
