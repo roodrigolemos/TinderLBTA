@@ -15,7 +15,6 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as? UIImage
         registrationViewModel.bindableImage.value = image
-//        registrationViewModel.image = image
         dismiss(animated: true, completion: nil)
     }
     
@@ -28,7 +27,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
 class RegistrationController: UIViewController {
     
     // UI Components
- let selectPhotoButton: UIButton = {
+    let selectPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Select Photo", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .heavy)
@@ -93,26 +92,21 @@ class RegistrationController: UIViewController {
         return button
     }()
     
+    let registeringHUD = JGProgressHUD(style: .dark)
+    
     @objc fileprivate func handleRegister() {
         self.handleTapDismiss()
-        print("Register our User in Firebase Auth")
-        guard let email = emailTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        
-        Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
-            
+        registrationViewModel.performRegistration { [weak self] (err) in
             if let err = err {
-                print(err)
-                self.showHUDWithError(error: err)
+                self?.showHUDWithError(error: err)
                 return
             }
-            
-            print("Successfully registered user:", res?.user.uid ?? "")
+            print("Finished registering our user")
         }
-        
     }
     
     fileprivate func showHUDWithError(error: Error) {
+        registeringHUD.dismiss()
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Failed registration"
         hud.detailTextLabel.text = error.localizedDescription
@@ -142,18 +136,15 @@ class RegistrationController: UIViewController {
             self.registerButton.setTitleColor(isFormValid ? .white : .gray, for: .normal)
         }
         registrationViewModel.bindableImage.bind { [unowned self] (img) in self.selectPhotoButton.setImage(img?.withRenderingMode(.alwaysOriginal), for: .normal)
-                }
-                
-        //        registrationViewModel.isFormValidObserver = { [unowned self] (isFormValid) in
-        //            print("Form is changing, is it valid?", isFormValid)
-        //
-        //            self.registerButton.isEnabled = isFormValid
-        //            self.registerButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.8235294118, green: 0, blue: 0.3254901961, alpha: 1) : .lightGray
-        //            self.registerButton.setTitleColor(isFormValid ? .white : .gray, for: .normal)
-        //        }
-//        registrationViewModel.imageObserver = { [unowned self] img in
-    //        self.selectPhotoButton.setImage(img?.withRenderingMode(.alwaysOriginal), for: .normal)
-//        }
+        }
+        registrationViewModel.bindableIsRegistering.bind { [unowned self] (isRegistering) in
+            if isRegistering == true {
+                self.registeringHUD.textLabel.text = "Register"
+                self.registeringHUD.show(in: self.view)
+            } else {
+                self.registeringHUD.dismiss()
+            }
+        }
     }
     
     fileprivate func setupTapGesture() {
@@ -171,7 +162,7 @@ class RegistrationController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self) // you'll have a retain cycle
+//        NotificationCenter.default.removeObserver(self) // you'll have a retain cycle
     }
     
     @objc fileprivate func handleKeyboardHide() {
@@ -211,7 +202,7 @@ class RegistrationController: UIViewController {
         verticalStackView
         ])
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+ override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if self.traitCollection.verticalSizeClass == .compact {
             overallStackView.axis = .horizontal
         } else {
@@ -219,7 +210,7 @@ class RegistrationController: UIViewController {
         }
     }
     
-   fileprivate func setupLayout() {
+    fileprivate func setupLayout() {
         view.addSubview(overallStackView)
         
         overallStackView.axis = .vertical
@@ -249,4 +240,3 @@ class RegistrationController: UIViewController {
     }
 
 }
-
