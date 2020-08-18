@@ -202,7 +202,7 @@ class RegistrationController: UIViewController {
         verticalStackView
         ])
     
- override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if self.traitCollection.verticalSizeClass == .compact {
             overallStackView.axis = .horizontal
         } else {
@@ -238,5 +238,5 @@ class RegistrationController: UIViewController {
         view.layer.addSublayer(gradientLayer)
         gradientLayer.frame = view.bounds
     }
-
+    
 }
