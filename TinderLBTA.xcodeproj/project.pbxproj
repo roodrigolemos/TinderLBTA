@@ -28,6 +28,7 @@
 		B7F6570C24D9AB8E00694B5F /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6570B24D9AB8E00694B5F /* Extensions+UIView.swift */; };
 		B7F6570F24D9BC5800694B5F /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6570E24D9BC5800694B5F /* HomeBottomControlsStackView.swift */; };
 		B7F6571124D9BF7200694B5F /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6571024D9BF7200694B5F /* TopNavigationStackView.swift */; };
+		B7F717DC24F940AA0034C099 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F717DB24F940AA0034C099 /* AgeRangeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		B7F6570B24D9AB8E00694B5F /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		B7F6570E24D9BC5800694B5F /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		B7F6571024D9BF7200694B5F /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
+		B7F717DB24F940AA0034C099 /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				B726B4F624DAFDDF00BEDEF3 /* CardView.swift */,
 				B794338C24E1B96700112617 /* CustomTextField.swift */,
 				B7387B3A24F68E62006DC0DB /* SettingsCell.swift */,
+				B7F717DB24F940AA0034C099 /* AgeRangeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				B7F656FB24D9AA8F00694B5F /* HomeController.swift in Sources */,
 				B7F656F724D9AA8F00694B5F /* AppDelegate.swift in Sources */,
 				B7F6570F24D9BC5800694B5F /* HomeBottomControlsStackView.swift in Sources */,
+				B7F717DC24F940AA0034C099 /* AgeRangeCell.swift in Sources */,
 				B73E07C524DC506800692543 /* User.swift in Sources */,
 				B77BE63324F416080027B077 /* SettingsController.swift in Sources */,
 				B794338B24E1B92300112617 /* RegistrationController.swift in Sources */,
