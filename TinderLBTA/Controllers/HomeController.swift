@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
-class HomeController: UIViewController, SettingsControllerDelegate {
+class HomeController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate {
     
     let topStackView = TopNavigationStackView()
     let cardsDeckView = UIView()
@@ -26,8 +26,25 @@ class HomeController: UIViewController, SettingsControllerDelegate {
         
         setupLayout()
         fetchCurrentUser()
-//        setupFirestoreUserCards()
-//        fetchUsersFromFirestore()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("HomeController did appear")
+        // you want to kick the user out when they log out
+        if Auth.auth().currentUser == nil {
+            let registrationController = RegistrationController()
+            registrationController.delegate = self
+            let navController = UINavigationController(rootViewController: registrationController)
+            navController.modalPresentationStyle = .fullScreen
+            present(navController, animated: true)
+        } else {
+            print("user ainda logado")
+        }
+    }
+    
+    func didFinishLoggingIn() {
+        fetchCurrentUser()
     }
     
     fileprivate let hud = JGProgressHUD(style: .dark)
@@ -87,6 +104,7 @@ class HomeController: UIViewController, SettingsControllerDelegate {
         let settingsController = SettingsController()
         settingsController.delegate = self
         let navController = UINavigationController(rootViewController: settingsController)
+        navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true)
     }
     
