@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ABDBB599A5179BFD83EF336 /* Pods_TinderLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CC9B84054DC8E22B532041 /* Pods_TinderLBTA.framework */; };
+		B70EFF6C2514FB230063E4A8 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70EFF6B2514FB230063E4A8 /* UserDetailsController.swift */; };
 		B724435E250A70B700CC89FE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724435C250A70B700CC89FE /* LoginController.swift */; };
 		B724435F250A70B700CC89FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724435D250A70B700CC89FE /* LoginViewModel.swift */; };
 		B726B4F724DAFDDF00BEDEF3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B726B4F624DAFDDF00BEDEF3 /* CardView.swift */; };
@@ -38,6 +39,7 @@
 		102BBB6E63DA8A5DA20D95B4 /* Pods-TinderLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderLBTA.release.xcconfig"; path = "Target Support Files/Pods-TinderLBTA/Pods-TinderLBTA.release.xcconfig"; sourceTree = "<group>"; };
 		28CC9B84054DC8E22B532041 /* Pods_TinderLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E45484E627A7C60B503BB7 /* Pods-TinderLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderLBTA.debug.xcconfig"; path = "Target Support Files/Pods-TinderLBTA/Pods-TinderLBTA.debug.xcconfig"; sourceTree = "<group>"; };
+		B70EFF6B2514FB230063E4A8 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		B724435C250A70B700CC89FE /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B724435D250A70B700CC89FE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B726B4F624DAFDDF00BEDEF3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B70EFF6A2514FB0B0063E4A8 /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				B70EFF6B2514FB230063E4A8 /* UserDetailsController.swift */,
+			);
+			path = "User Details";
+			sourceTree = "<group>";
+		};
 		B724435B250A707000CC89FE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		B73E07C924DC6EC700692543 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B70EFF6A2514FB0B0063E4A8 /* User Details */,
 				B724435B250A707000CC89FE /* Login */,
 				B7F656FA24D9AA8F00694B5F /* HomeController.swift */,
 				B794338A24E1B92300112617 /* RegistrationController.swift */,
@@ -316,6 +327,7 @@
 				B7F656FB24D9AA8F00694B5F /* HomeController.swift in Sources */,
 				B7F656F724D9AA8F00694B5F /* AppDelegate.swift in Sources */,
 				B7F6570F24D9BC5800694B5F /* HomeBottomControlsStackView.swift in Sources */,
+				B70EFF6C2514FB230063E4A8 /* UserDetailsController.swift in Sources */,
 				B7F717DC24F940AA0034C099 /* AgeRangeCell.swift in Sources */,
 				B724435F250A70B700CC89FE /* LoginViewModel.swift in Sources */,
 				B73E07C524DC506800692543 /* User.swift in Sources */,
