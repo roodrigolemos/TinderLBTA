@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ABDBB599A5179BFD83EF336 /* Pods_TinderLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CC9B84054DC8E22B532041 /* Pods_TinderLBTA.framework */; };
+		B709F612251974DF002C3AFC /* SwipingPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709F611251974DF002C3AFC /* SwipingPhotosController.swift */; };
 		B70EFF6C2514FB230063E4A8 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70EFF6B2514FB230063E4A8 /* UserDetailsController.swift */; };
 		B724435E250A70B700CC89FE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724435C250A70B700CC89FE /* LoginController.swift */; };
 		B724435F250A70B700CC89FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724435D250A70B700CC89FE /* LoginViewModel.swift */; };
@@ -39,6 +40,7 @@
 		102BBB6E63DA8A5DA20D95B4 /* Pods-TinderLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderLBTA.release.xcconfig"; path = "Target Support Files/Pods-TinderLBTA/Pods-TinderLBTA.release.xcconfig"; sourceTree = "<group>"; };
 		28CC9B84054DC8E22B532041 /* Pods_TinderLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E45484E627A7C60B503BB7 /* Pods-TinderLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderLBTA.debug.xcconfig"; path = "Target Support Files/Pods-TinderLBTA/Pods-TinderLBTA.debug.xcconfig"; sourceTree = "<group>"; };
+		B709F611251974DF002C3AFC /* SwipingPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingPhotosController.swift; sourceTree = "<group>"; };
 		B70EFF6B2514FB230063E4A8 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		B724435C250A70B700CC89FE /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B724435D250A70B700CC89FE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				B70EFF6B2514FB230063E4A8 /* UserDetailsController.swift */,
+				B709F611251974DF002C3AFC /* SwipingPhotosController.swift */,
 			);
 			path = "User Details";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				B7F6570C24D9AB8E00694B5F /* Extensions+UIView.swift in Sources */,
 				B7F656F924D9AA8F00694B5F /* SceneDelegate.swift in Sources */,
 				B7387B3B24F68E62006DC0DB /* SettingsCell.swift in Sources */,
+				B709F612251974DF002C3AFC /* SwipingPhotosController.swift in Sources */,
 				B73E07C824DC6EA000692543 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
