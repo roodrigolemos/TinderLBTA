@@ -36,10 +36,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
             let registrationController = RegistrationController()
             registrationController.delegate = self
             let navController = UINavigationController(rootViewController: registrationController)
-            navController.modalPresentationStyle = .fullScreen
             present(navController, animated: true)
-        } else {
-            print("user ainda logado")
         }
     }
     
@@ -72,8 +69,9 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     var lastFetchedUser: User?
     
     fileprivate func fetchUsersFromFirestore() {
-        guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
-        // i will introduce pagination here to page through 2 users at a time
+        let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
+        let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
+        
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
         query.getDocuments { (snapshot, err) in
             self.hud.dismiss()
@@ -120,15 +118,6 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     func didSaveSettings() {
         print("Notified of dismissal from SettingsController in HomeController")
         fetchCurrentUser()
-    }
-    
-    fileprivate func setupFirestoreUserCards() {
-        cardViewModels.forEach { (cardVM) in
-            let cardView = CardView(frame: .zero)
-            cardView.cardViewModel = cardVM
-            cardsDeckView.addSubview(cardView)
-            cardView.fillSuperview()
-        }
     }
 
     // MARK:- Fileprivate

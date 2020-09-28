@@ -22,7 +22,7 @@ class CardView: UIView {
             let imageName = cardViewModel.imageUrls.first ?? ""
             // load our image using some kind of url instead
             if let url = URL(string: imageName) {
-                imageView.sd_setImage(with: url)
+                imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "photo_placeholder"), options: .continueInBackground)
             }
             
             informationLabel.attributedText = cardViewModel.attributedString
