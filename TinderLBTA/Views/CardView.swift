@@ -19,11 +19,7 @@ class CardView: UIView {
     
     var cardViewModel: CardViewModel! {
         didSet {
-            let imageName = cardViewModel.imageUrls.first ?? ""
-            // load our image using some kind of url instead
-            if let url = URL(string: imageName) {
-                imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "photo_placeholder"), options: .continueInBackground)
-            }
+            swipingPhotosController.cardViewModel = self.cardViewModel
             
             informationLabel.attributedText = cardViewModel.attributedString
             informationLabel.textAlignment = cardViewModel.textAlignment
@@ -42,9 +38,6 @@ class CardView: UIView {
     fileprivate func setupImageIndexObserver() {
         cardViewModel.imageIndexObserver = { [weak self] (idx, imageUrl) in
             print("Changing photo from view model")
-            if let url = URL(string: imageUrl ?? "") {
-                self?.imageView.sd_setImage(with: url)
-            }
             self?.barsStackView.arrangedSubviews.forEach({ (v) in
                 v.backgroundColor = self?.barDeselectedColor
             })
@@ -53,7 +46,7 @@ class CardView: UIView {
     }
     
     // encapsulation
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
+    fileprivate let swipingPhotosController = SwipingPhotosController(isCardViewMode: true)
     fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let informationLabel = UILabel()
     
@@ -98,11 +91,9 @@ class CardView: UIView {
         layer.cornerRadius = 10
         clipsToBounds = true
         
-        imageView.contentMode = .scaleAspectFill
-        addSubview(imageView)
-        imageView.fillSuperview()
-        
-        setupBarsStackView()
+        let swipingPhotosView = swipingPhotosController.view!
+        addSubview(swipingPhotosView)
+        swipingPhotosView.fillSuperview()
         
         // add a gradient layer somehow
         setupGradientLayer()
